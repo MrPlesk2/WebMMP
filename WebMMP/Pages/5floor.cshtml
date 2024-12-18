@@ -1,0 +1,220 @@
+﻿@page
+@model FifthFloor
+@{
+    ViewData["Title"] = "5 floor";
+}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МатМех 5 Этаж</title>
+    <link rel="stylesheet" href="~/css/styles2.css">
+</head>
+<body>
+    <div class="header">
+        <h1>МатМех 5 Этаж</h1>
+    </div>
+    <div class="map-container">
+        <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" class="map">
+            <!-- лестница -->
+            <svg width="100" height="200">
+                <!-- Прямоугольник для фона лестницы -->
+                <rect x="26" y="51" width="23" height="98" class="stairway-bg" />
+
+                <!-- Линии, изображающие ступени -->
+                <line x1="26" y1="60" x2="49" y2="60" class="stairway-step" />
+                <line x1="26" y1="70" x2="49" y2="70" class="stairway-step" />
+                <line x1="26" y1="80" x2="49" y2="80" class="stairway-step" />
+                <line x1="26" y1="90" x2="49" y2="90" class="stairway-step" />
+                <line x1="26" y1="100" x2="49" y2="100" class="stairway-step" />
+                <line x1="26" y1="110" x2="49" y2="110" class="stairway-step" />
+                <line x1="26" y1="120" x2="49" y2="120" class="stairway-step" />
+                <line x1="26" y1="130" x2="49" y2="130" class="stairway-step" />
+                <line x1="26" y1="140" x2="49" y2="140" class="stairway-step" />
+            </svg>
+
+            <!-- серое -->
+            <rect x="51" y="51" width="23" height="98" class="gray-rect"></rect>
+
+            <!-- 501 -->
+            <rect id="501" x="75" y="50" width="75" height="100" class="room" data-room="501" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 501</title>
+            </rect>
+            <text x="100" y="105" class="roomLabel">501</text>
+
+            <!-- 505 -->
+            <rect id="505" x="150" y="50" width="75" height="100" class="room" data-room="505" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 505</title>
+            </rect>
+            <text x="175" y="105" class="roomLabel">505</text>
+
+            <!-- 507 -->
+            <rect id="507" x="225" y="50" width="100" height="100" class="room" data-room="507" data-status="Свободна" data-equipment="Компьютеры" data-size="Большая">
+                <title>Аудитория 507</title>
+            </rect>
+            <text x="260" y="105" class="roomLabel">507</text>
+
+            <svg width="400" height="200">
+                <!-- Фон лестницы с использованием класса "stairway-bg" -->
+                <rect x="326" y="51" width="23" height="98" class="stairway-bg" />
+
+                <!-- Линии, изображающие ступени, с использованием класса "stairway-step" -->
+                <line x1="326" y1="60" x2="350" y2="60" class="stairway-step" />
+                <line x1="326" y1="70" x2="350" y2="70" class="stairway-step" />
+                <line x1="326" y1="80" x2="350" y2="80" class="stairway-step" />
+                <line x1="326" y1="90" x2="350" y2="90" class="stairway-step" />
+                <line x1="326" y1="100" x2="350" y2="100" class="stairway-step" />
+                <line x1="326" y1="110" x2="350" y2="110" class="stairway-step" />
+                <line x1="326" y1="120" x2="350" y2="120" class="stairway-step" />
+                <line x1="326" y1="130" x2="350" y2="130" class="stairway-step" />
+                <line x1="326" y1="140" x2="350" y2="140" class="stairway-step" />
+            </svg>
+
+            <!-- 509 -->
+            <rect id="509" x="350" y="50" width="140" height="100" class="room" data-room="509" data-status="Свободна" data-equipment="Меловая доска" data-size="Большая">
+                <title>Аудитория 509</title>
+            </rect>
+            <text x="405" y="105" class="roomLabel">509</text>
+
+            <!-- 511 -->
+            <rect id="511" x="490" y="50" width="75" height="100" class="room" data-room="511" data-status="Свободна" data-equipment="Компьютеры, Маркерная доска" data-size="Средняя">
+                <title>Аудитория 511</title>
+            </rect>
+            <text x="515" y="105" class="roomLabel">511</text>
+
+            <!-- серое -->
+            <rect x="566" y="51" width="48" height="98" class="gray-rect"></rect>
+
+            <!-- 513 -->
+            <rect id="513" x="615" y="50" width="140" height="100" class="room" data-room="513" data-status="Свободна" data-equipment="Меловая доска" data-size="Большая">
+                <title>Аудитория 513</title>
+            </rect>
+            <text x="670" y="105" class="roomLabel">513</text>
+
+            <!-- серое -->
+            <rect x="756" y="51" width="23" height="98" class="gray-rect"></rect>
+
+            <svg width="1000" height="200">
+                <!-- Фон лестницы с использованием класса "stairway-bg" -->
+                <rect x="781" y="51" width="23" height="98" class="stairway-bg" />
+
+                <!-- Линии, изображающие ступени, с использованием класса "stairway-step" -->
+                <line x1="781" y1="60" x2="804" y2="60" class="stairway-step" />
+                <line x1="781" y1="70" x2="804" y2="70" class="stairway-step" />
+                <line x1="781" y1="80" x2="804" y2="80" class="stairway-step" />
+                <line x1="781" y1="90" x2="804" y2="90" class="stairway-step" />
+                <line x1="781" y1="100" x2="804" y2="100" class="stairway-step" />
+                <line x1="781" y1="110" x2="804" y2="110" class="stairway-step" />
+                <line x1="781" y1="120" x2="804" y2="120" class="stairway-step" />
+                <line x1="781" y1="130" x2="804" y2="130" class="stairway-step" />
+                <line x1="781" y1="140" x2="804" y2="140" class="stairway-step" />
+            </svg>
+
+            <!-- серое -->
+            <rect x="806" y="51" width="58" height="98" class="gray-rect"></rect>
+
+            <!-- 515 -->
+            <rect id="515" x="865" y="50" width="55" height="100" class="room" data-room="515" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 515</title>
+            </rect>
+            <text x="880" y="105" class="roomLabel">515</text>
+
+            <!-- 517 -->
+            <rect id="517" x="920" y="50" width="55" height="100" class="room" data-room="517" data-status="Свободна" data-equipment="Компьютеры, Маркерная доска" data-size="Маленькая">
+                <title>Аудитория 517</title>
+            </rect>
+            <text x="935" y="105" class="roomLabel">517</text>
+
+
+            <!-- серое -->
+            <rect x="26" y="251" width="48" height="98" class="gray-rect"></rect>
+
+            <!-- 514 -->
+            <rect id="514" x="75" y="250" width="150" height="100" class="room" data-room="514" data-status="Свободна" data-equipment="Компьютеры, доска" data-size="Большая">
+                <title>Аудитория 514</title>
+            </rect>
+            <text x="135" y="305" class="roomLabel">514</text>
+
+            <!-- серое -->
+            <rect x="226" y="251" width="98" height="98" class="gray-rect"></rect>
+
+            <!-- 522 -->
+            <rect id="522" x="325" y="250" width="75" height="100" class="room" data-room="522" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 522</title>
+            </rect>
+            <text x="350" y="305" class="roomLabel">522</text>
+
+            <!-- 524а -->
+            <rect id="524a" x="400" y="250" idth="70" height="100" class="room" data-room="524a" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 510</title>
+            </rect>
+            <text x="415" y="305" class="roomLabel">524а</text>
+
+            <!-- 524 -->
+            <rect id="524" x="470" y="250" width="40" height="100" class="room" data-room="524" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 524</title>
+            </rect>
+            <text x="478" y="305" class="roomLabel">524</text>
+
+            <!-- 526 -->
+            <rect id="526" x="510" y="250" width="90" height="100" class="room" data-room="526" data-status="Свободна" data-equipment="Компьютеры, Маркерная доска" data-size="Средняя">
+                <title>Аудитория 526</title>
+            </rect>
+            <text x="540" y="305" class="roomLabel">526</text>
+
+            <!-- 528 -->
+            <rect id="528" x="600" y="250" width="40" height="100" class="room" data-room="528" data-status="Свободна" data-equipment="Компьютеры, Маркерная доска" data-size="Средняя">
+                <title>Аудитория 528</title>
+            </rect>
+            <text x="608" y="305" class="roomLabel">528</text>
+
+            <!-- 530 -->
+            <rect id="530" x="640" y="250" width="40" height="100" class="room" data-room="530" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 530</title>
+            </rect>
+            <text x="648" y="305" class="roomLabel">530</text>
+
+            <!-- серое -->
+            <rect x="681" y="251" width="33" height="98" class="gray-rect"></rect>
+
+            <!-- 532 -->
+            <rect id="532" x="715" y="250" width="80" height="100" class="room" data-room="532" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 532</title>
+            </rect>
+            <text x="740" y="305" class="roomLabel">532</text>
+
+            <!-- серое -->
+            <rect x="796" y="251" width="48" height="98" class="gray-rect"></rect>
+
+            <!-- 538 -->
+            <rect id="538" x="845" y="250" width="65" height="100" class="room" data-room="538" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 538</title>
+            </rect>
+            <text x="865" y="305" class="roomLabel">538</text>
+
+            <!-- 540 -->
+            <rect id="540" x="910" y="250" width="65" height="100" class="room" data-room="540" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 540</title>
+            </rect>
+            <text x="930" y="305" class="roomLabel">540</text>
+
+            <!-- Другие аудитории можно добавить аналогично -->
+        </svg>
+    </div>
+
+    <!-- Всплывающее окно для информации -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="room-title">Аудитория</h2>
+            <p id="room-info">Информация об аудитории</p>
+            <button onclick="toggleStatus()">Изменить статус</button>
+        </div>
+    </div>
+
+    <script src="~/js/script2.js"></script>
+</body>
+</html>

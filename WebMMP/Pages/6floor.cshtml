@@ -1,0 +1,205 @@
+﻿@page
+@model WebMMP.Pages.SixthFloor
+@{
+    ViewData["Title"] = "6 floor 1";
+}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МатМех 6 Этаж</title>
+    <link rel="stylesheet" href="~/css/styles2.css">
+</head>
+<body>
+    <div class="header">
+        <h1>МатМех 6 Этаж</h1>
+    </div>
+    <div class="map-container">
+        <a class="arrow arrow-left" asp-area="" asp-page="/6floor2" title="Влево">←</a>
+        <svg viewBox="0 0 1000 450" xmlns="http://www.w3.org/2000/svg" class="map">
+
+            <!-- лестница -->
+            <svg width="1000" height="200">
+                <!-- Прямоугольник для фона лестницы -->
+                <rect x="26" y="51" width="23" height="98" class="stairway-bg" />
+
+                <!-- Линии, изображающие ступени -->
+                <line x1="26" y1="60" x2="49" y2="60" class="stairway-step" />
+                <line x1="26" y1="70" x2="49" y2="70" class="stairway-step" />
+                <line x1="26" y1="80" x2="49" y2="80" class="stairway-step" />
+                <line x1="26" y1="90" x2="49" y2="90" class="stairway-step" />
+                <line x1="26" y1="100" x2="49" y2="100" class="stairway-step" />
+                <line x1="26" y1="110" x2="49" y2="110" class="stairway-step" />
+                <line x1="26" y1="120" x2="49" y2="120" class="stairway-step" />
+                <line x1="26" y1="130" x2="49" y2="130" class="stairway-step" />
+                <line x1="26" y1="140" x2="49" y2="140" class="stairway-step" />
+            </svg>
+
+            <!-- 611 -->
+            <rect id="611" x="50" y="50" width="165" height="100" class="room" data-room="611" data-status="Свободна" data-equipment="Доска" data-size="Большая">
+                <title>Аудитория 611</title>
+            </rect>
+            <text x="115" y="105" class="roomLabel">611</text>
+
+            <!-- 613 -->
+            <rect id="613" x="215" y="50" width="95" height="100" class="room" data-room="613" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 613</title>
+            </rect>
+            <text x="250" y="105" class="roomLabel">613</text>
+
+            <!-- 615 -->
+            <rect id="615" x="310" y="50" width="60" height="100" class="room" data-room="615" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 615</title>
+            </rect>
+            <text x="327" y="105" class="roomLabel">615</text>
+
+            <!-- 617 -->
+            <rect id="617" x="370" y="50" width="60" height="100" class="room" data-room="617" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 617</title>
+            </rect>
+            <text x="387" y="105" class="roomLabel">617</text>
+
+            <!-- 619 -->
+            <rect id="619" x="430" y="50" width="60" height="100" class="room" data-room="619" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 619</title>
+            </rect>
+            <text x="447" y="105" class="roomLabel">619</text>
+
+            <!-- 621 -->
+            <rect id="621" x="490" y="50" width="140" height="100" class="room" data-room="621" data-status="Свободна" data-equipment="Доска" data-size="Большая">
+                <title>Аудитория 621</title>
+            </rect>
+            <text x="545" y="105" class="roomLabel">621</text>
+
+            <!-- серое -->
+            <rect x="631" y="51" width="38" height="98" class="gray-rect"></rect>
+
+            <!-- серое -->
+            <rect x="671" y="51" width="43" height="98" class="gray-rect"></rect>
+
+
+            <svg width="1000" height="200">
+                <!-- Фон лестницы с использованием класса "stairway-bg" -->
+                <rect x="716" y="51" width="23" height="98" class="stairway-bg" />
+
+                <!-- Линии, изображающие ступени, с использованием класса "stairway-step" -->
+                <line x1="716" y1="60" x2="739" y2="60" class="stairway-step" />
+                <line x1="716" y1="70" x2="739" y2="70" class="stairway-step" />
+                <line x1="716" y1="80" x2="739" y2="80" class="stairway-step" />
+                <line x1="716" y1="90" x2="739" y2="90" class="stairway-step" />
+                <line x1="716" y1="100" x2="739" y2="100" class="stairway-step" />
+                <line x1="716" y1="110" x2="739" y2="110" class="stairway-step" />
+                <line x1="716" y1="120" x2="739" y2="120" class="stairway-step" />
+                <line x1="716" y1="130" x2="739" y2="130" class="stairway-step" />
+                <line x1="716" y1="140" x2="739" y2="140" class="stairway-step" />
+            </svg>
+
+            <!-- серое -->
+            <rect x="741" y="51" width="95" height="98" class="gray-rect"></rect>
+
+            <!-- 623 -->
+            <rect id="623" x="835" y="50" width="75" height="100" class="room" data-room="623" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 623</title>
+            </rect>
+            <text x="860" y="105" class="roomLabel">623</text>
+
+            <!-- 625 -->
+            <rect id="625" x="910" y="50" width="65" height="100" class="room" data-room="625" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 625</title>
+            </rect>
+            <text x="930" y="105" class="roomLabel">625</text>
+
+
+            <!-- 622 -->
+            <rect id="622" x="25" y="250" width="105" height="100" class="room" data-room="622" data-status="Свободна" data-equipment="Доска" data-size="Большая">
+                <title>Аудитория 622</title>
+            </rect>
+            <text x="63" y="305" class="roomLabel">622</text>
+
+            <!-- 622а -->
+            <rect id="622a" x="130" y="250" width="80" height="100" class="room" data-room="622a (аквариум)" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 622a</title>
+            </rect>
+            <text x="151" y="305" class="roomLabel">622а</text>
+
+            <!-- 624 -->
+            <rect id="624" x="210" y="250" width="90" height="100" class="room" data-room="624" data-status="Свободна" data-equipment="Компьютеры, доска" data-size="Средняя">
+                <title>Аудитория 624</title>
+            </rect>
+            <text x="242" y="305" class="roomLabel">624</text>
+
+            <!-- 626 -->
+            <rect id="626" x="300" y="250" width="60" height="100" class="room" data-room="626" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 626</title>
+            </rect>
+            <text x="318" y="305" class="roomLabel">626</text>
+
+            <!-- 628 -->
+            <rect id="628" x="360" y="250" width="130" height="100" class="room" data-room="628" data-status="Свободна" data-equipment="Доска" data-size="Большая">
+                <title>Аудитория 628</title>
+            </rect>
+            <text x="410" y="305" class="roomLabel">628</text>
+
+            <!-- 630 -->
+            <rect id="630" x="490" y="250" width="55" height="100" class="room" data-room="630" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 630</title>
+            </rect>
+            <text x="505" y="305" class="roomLabel">630</text>
+
+            <!-- 632 -->
+            <rect id="632" x="545" y="250" width="130" height="100" class="room" data-room="632" data-status="Свободна" data-equipment="Доска" data-size="Большая">
+                <title>Аудитория 632</title>
+            </rect>
+            <text x="595" y="305" class="roomLabel">632</text>
+
+            <!-- 632а -->
+            <rect id="632a" x="675" y="250" width="55" height="100" class="room" data-room="632a" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 632a</title>
+            </rect>
+            <text x="685" y="305" class="roomLabel">632а</text>
+
+            <!-- 642 -->
+            <rect id="642" x="730" y="250" width="55" height="100" class="room" data-room="642" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 642</title>
+            </rect>
+            <text x="745" y="305" class="roomLabel">642</text>
+
+            <!-- 636 -->
+            <rect id="636" x="785" y="250" width="55" height="100" class="room" data-room="636" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 636</title>
+            </rect>
+            <text x="800" y="305" class="roomLabel">636</text>
+
+            <!-- 638 -->
+            <rect id="638" x="840" y="250" width="55" height="100" class="room" data-room="638" data-status="Свободна" data-equipment="Доска" data-size="Маленькая">
+                <title>Аудитория 638</title>
+            </rect>
+            <text x="855" y="305" class="roomLabel">638</text>
+
+            <!-- 640 -->
+            <rect id="640" x="895" y="250" width="80" height="100" class="room" data-room="640" data-status="Свободна" data-equipment="Доска" data-size="Средняя">
+                <title>Аудитория 640</title>
+            </rect>
+            <text x="920" y="305" class="roomLabel">640</text>
+
+            <!-- Другие аудитории можно добавить аналогично -->
+        </svg>
+    </div>
+
+
+    <!-- Всплывающее окно для информации -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="room-title">Аудитория</h2>
+            <p id="room-info">Информация об аудитории</p>
+            <button onclick="toggleStatus()">Изменить статус</button>
+        </div>
+    </div>
+
+    <script src="~/js/script2.js"></script>
+</body>
+</html>
